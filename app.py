@@ -32,6 +32,8 @@ nine = pygame.draw.rect(window, white,(375,375,150,150))
 
 player_turn = 'rect'
 
+space = [[True,True,True],[True,True,True],[True,True,True]]
+
 while True:
     
     pygame.time.delay(100)
@@ -45,77 +47,86 @@ while True:
         if event.type == pygame.MOUSEBUTTONUP:
             position = pygame.mouse.get_pos()
             
-            if first.collidepoint(position):
+            if first.collidepoint(position) and space[0][0]:
                 if player_turn=="rect":
                     pygame.draw.rect(window,red,(50,50,100,100))
                     player_turn="circle"
                 else:
                     pygame.draw.circle(window,green,(100,100),50)
                     player_turn="rect"
+                space[0][0]=False
                 
-            if second.collidepoint(position):
+            if second.collidepoint(position) and space[0][1]:
                  if player_turn=="rect":
                      pygame.draw.rect(window,red,(225,50,100,100))
                      player_turn="circle"
                  else:
                      pygame.draw.circle(window,green,(275,100),50)
                      player_turn="rect"
+                 space[0][1]=False    
                      
-            if third.collidepoint(position):
+            if third.collidepoint(position) and space[0][2]:
                 if player_turn=="rect":
                     pygame.draw.rect(window,red,(400,50,100,100))
                     player_turn="circle"
                 else:
                     pygame.draw.circle(window,green,(450,100),50)
                     player_turn="rect"
+                space[0][2]=False
                     
-            if forth.collidepoint(position):
+            if forth.collidepoint(position) and space[1][0]:
                 if player_turn=="rect":
                     pygame.draw.rect(window,red,(50,225,100,100))
                     player_turn="circle"
                 else:
                     pygame.draw.circle(window,green,(100,275),50)
                     player_turn="rect"
+                space[1][0]=False
                     
-            if fifth.collidepoint(position):
+            if fifth.collidepoint(position) and space[1][1]:
                 if player_turn=="rect":
                     pygame.draw.rect(window,red,(225,225,100,100))
                     player_turn="circle"
                 else:
                     pygame.draw.circle(window,green,(275,275),50)
                     player_turn="rect"
+                space[1][1]=False
                     
-            if sixth.collidepoint(position):
+            if sixth.collidepoint(position) and space[1][2]:
                 if player_turn=="rect":
                     pygame.draw.rect(window,red,(400,225,100,100))
                     player_turn="circle"
                 else:
                      pygame.draw.circle(window,green,(450,275),50)
                      player_turn="rect"
+                space[1][2]=False
                      
-            if seventh.collidepoint(position):
+            if seventh.collidepoint(position) and space[2][0]:
                  if player_turn=="rect":
                      pygame.draw.rect(window,red,(50,400,100,100))
                      player_turn="circle"
                  else:
                      pygame.draw.circle(window,green,(100,450),50)
                      player_turn="rect"
+                 space[2][0]=False
                 
-            if eight.collidepoint(position):
+            if eight.collidepoint(position) and space[2][1]:
                 if player_turn=="rect":
                     pygame.draw.rect(window,red,(225,400,100,100))
                     player_turn="circle"
                 else:
                     pygame.draw.circle(window,green,(275,450),50)
                     player_turn="rect"
+                space[2][1]=False
                     
-            if nine.collidepoint(position):
+            if nine.collidepoint(position) and space[2][2]:
                 if player_turn=="rect":
                     pygame.draw.rect(window,red,(400,400,100,100))
                     player_turn="circle"
                 else:
                     pygame.draw.circle(window,green,(450,450),50)
                     player_turn="rect"
+                space[2][2]=False
             
     
     pygame.display.update()
