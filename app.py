@@ -43,6 +43,23 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+        
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                first = pygame.draw.rect(window, white, (25,25,150,150))
+                second = pygame.draw.rect(window, white,(200,25,150,150))
+                third = pygame.draw.rect(window, white,(375,25,150,150))
+
+                forth = pygame.draw.rect(window, white,(25,200,150,150))
+                fifth = pygame.draw.rect(window, white,(200,200,150,150))
+                sixth = pygame.draw.rect(window, white,(375,200,150,150))
+
+                seventh = pygame.draw.rect(window, white,(25,375,150,150))
+                eight = pygame.draw.rect(window, white,(200,375,150,150))
+                nine = pygame.draw.rect(window, white,(375,375,150,150))
+                
+                space = [[True,True,True],[True,True,True],[True,True,True]]
+                player_turn="rect"
             
         if event.type == pygame.MOUSEBUTTONUP:
             position = pygame.mouse.get_pos()
