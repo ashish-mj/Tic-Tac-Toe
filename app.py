@@ -15,6 +15,7 @@ pygame.display.set_caption('Tic-Tac-Toe')
 
 white = (255,255,255)
 red = (255,0,0)
+green = (0,255,0)
 
 first = pygame.draw.rect(window, white, (25,25,150,150))
 second = pygame.draw.rect(window, white,(200,25,150,150))
@@ -45,29 +46,47 @@ while True:
             if first.collidepoint(position):
                 pygame.draw.rect(window,red,(50,50,100,100))
                 
+                pygame.draw.circle(window,green,(100,100),50)
+                
             if second.collidepoint(position):
                 pygame.draw.rect(window,red,(225,50,100,100))
+                
+                pygame.draw.circle(window,green,(275,100),50)
                 
             if third.collidepoint(position):
                 pygame.draw.rect(window,red,(400,50,100,100))
                 
+                pygame.draw.circle(window,green,(450,100),50)
+                
             if forth.collidepoint(position):
                 pygame.draw.rect(window,red,(50,225,100,100))
+                
+                pygame.draw.circle(window,green,(100,275),50)
                 
             if fifth.collidepoint(position):
                 pygame.draw.rect(window,red,(225,225,100,100))
                 
+                pygame.draw.circle(window,green,(275,275),50)
+                
             if sixth.collidepoint(position):
                 pygame.draw.rect(window,red,(400,225,100,100))
+                
+                pygame.draw.circle(window,green,(450,275),50)
                 
             if seventh.collidepoint(position):
                 pygame.draw.rect(window,red,(50,400,100,100))
                 
+                pygame.draw.circle(window,green,(100,450),50)
+                
             if eight.collidepoint(position):
                 pygame.draw.rect(window,red,(225,400,100,100))
                 
+                pygame.draw.circle(window,green,(275,450),50)
+                
             if nine.collidepoint(position):
                 pygame.draw.rect(window,red,(400,400,100,100))
+                
+                pygame.draw.circle(window,green,(450,450),50)
             
             
     
